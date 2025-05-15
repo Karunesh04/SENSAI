@@ -21,7 +21,7 @@ import {
 export default function Header() {
   return (
     <header className="fixed top-0 w-full border-b bg-background/80 backdrop-blur-md z-50 supports-[backdrop-filter]:bg-background/60">
-      <nav className="container m-auto px-4 h-16 flex items-center justify-between">
+      <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/">
           <Image
             src="/logo.png"
@@ -32,6 +32,7 @@ export default function Header() {
           />
         </Link>
 
+        {/* Action Buttons */}
         <div className="flex items-center space-x-2 md:space-x-4">
           <SignedIn>
             <Link href={"dashboard"}>
@@ -74,6 +75,7 @@ export default function Header() {
               </DropdownMenuContent>
             </DropdownMenu>
           </SignedIn>
+          
           <SignedOut>
             <SignInButton>
               <Button variant={"outline"}>Sign In</Button>
